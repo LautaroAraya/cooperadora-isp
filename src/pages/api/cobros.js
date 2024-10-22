@@ -3,7 +3,7 @@ export default async function handler (req,res) {
   if(req.method === 'GET'){
 
     try {
-      const response = await fetch('http://localhost:1973/cobros');
+      const response = await fetch('http://localhost:4000/cobros');
       const data = await response.json();
       res.status(200).send(data);
     } catch (error) {
@@ -16,7 +16,7 @@ export default async function handler (req,res) {
     const data = JSON.parse(req.body);
     // Fetch a backend
     try {
-      const response = await fetch('http://localhost:1973/cobros', {
+      const response = await fetch('http://localhost:4000/cobros', {
         method: 'POST',
         body: JSON.stringify(data),
         headers: {
@@ -35,7 +35,7 @@ export default async function handler (req,res) {
   if(req.method === 'DELETE'){
     try{
       const id = req.body;
-      const response = await fetch(`http://localhost:1973/cobros/${id}`, {
+      const response = await fetch(`http://localhost:4000/cobros/${id}`, {
         method: 'DELETE'
       });
       const responseData = await response.json();

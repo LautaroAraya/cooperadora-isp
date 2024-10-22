@@ -5,7 +5,7 @@ export default async function handler(req, res) {
     const data = JSON.parse(req.body);
     // Fetch a backend
     try {
-      const response = await fetch('http://localhost:1973/pagos', {
+      const response = await fetch('http://localhost:4000/pagos', {
         method: 'POST',
         body: JSON.stringify(data),
         headers: {
@@ -23,7 +23,7 @@ export default async function handler(req, res) {
     try{
       const data = JSON.parse(req.body);
       // Fetch a backend con metodo PUT
-      const response = await fetch('http://localhost:1973/pagos', {
+      const response = await fetch('http://localhost:4000/pagos', {
         method: 'PUT',
         body: JSON.stringify(data),
         headers: {
