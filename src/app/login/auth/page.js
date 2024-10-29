@@ -1,6 +1,6 @@
 "use client";
 
-import { signIn } from "next-auth/client"; // Importa desde next-auth/react en v4
+import { signIn } from "next-auth/client";
 import { useState } from "react";
 
 const LoginPage = () => {
@@ -24,13 +24,12 @@ const LoginPage = () => {
       window.location.href = "/"; // Redirige si el login es exitoso
     }
   };
-
   return (
     <div>
       <h1>Iniciar Sesión</h1>
       <form onSubmit={handleLogin}>
         <div>
-          <label htmlFor="email">Email:</label>
+          <label htmlFor="email">Email: </label>
           <input
             type="email"
             id="email"
@@ -39,7 +38,7 @@ const LoginPage = () => {
           />
         </div>
         <div>
-          <label htmlFor="password">Password:</label>
+          <label htmlFor="password">Password: </label>
           <input
             type="password"
             id="password"
